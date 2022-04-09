@@ -26,10 +26,19 @@ According to the business requirements and considering the cost factor, two sepa
  
 ## Dataset
 
-This is data gathered from 7043 telco customers and dataset has 21 features (columns). Each row represents a customer, each column contains customer’s attributes described on the column Metadata.
+##### Independent Features
+* Unnamed: 0 - Index column and this is an unnecessary column
+* Brand me — Brand of the mobile phone and the model.
+* Ratings — Consumer rating for the mobile phone
+* RAM — RAM size of the mobile
+* ROM — ROM (Internal Memory) size of the mobile
+* Mobile_Size — Size of the mobile in inches
+* Primary_Cam — Pixel size of the back camera
+* Selfi_Cam — Pixel size of the front/selfi camera
+* Battery_Power — Battery capacity of the mobilr in mAh
+##### Dependent Features
+* Price — Price of the mobile
 
-The “Churn” column is our target variable and it has two outcomes. Therefore this is a binary classification problem and using below link,you can easily download the dataset.
-https://www.kaggle.com/blastchar/telco-customer-churn
 ## Motivation
 
 When I was searching about AWS Sagemaker, I struggle a lot as lack of references in this feild. It has some references, but there are missing few things. Therefore I need to fullfil that gap. So now I have some experience in this feild and as a MLOps team memeber, I migrated a lot of projects into cloud. I saved data scientists' valuable time by automating and scheduling their ML projects. So now I need to share that experience and knowledge with you and this is my first step of that journey.
@@ -60,14 +69,15 @@ https://aws.amazon.com/free/
 2) Run build_docker.ipynb
 3) Execute training_pipeline.ipynb
 4) See the workflow using AWS Sagemaker stuido
-(i) Open Sagemaker Studio
-(ii) Choose Pipeline option then you can see the execution list
-(iii) Select the executing one, see the visualization
-(iv) If you need to see more details about each stage, click on the each bubble and right hand side you can see all the details of each stage
-(v) To see the model registry, click the Model Registry option in the left hand side
+* (i) Open Sagemaker Studio
+* (ii) Choose Pipeline option then you can see the execution list
+* (iii) Select the executing one, see the visualization
+* (iv) If you need to see more details about each stage, click on the each bubble and right hand side you can see all the details of each stage
+* (v) To see the model registry, click the Model Registry option in the left hand side
 
 ## Deployment on AWS Sagemaker
 
+Will disscuss more details in the pipeline_train.ipynb
 
 ## Directory Tree
 
@@ -92,7 +102,8 @@ https://aws.amazon.com/free/
 ## To Do
 
 Need to add,
-1) evalution step as a seperate component
+1) Need to add evalution step as a seperate component
+2) Need to add accuracy condition to the workflow
 
 Don't worry, we will discss above topics and many more in the future sections.
 
